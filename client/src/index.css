@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 60 9% 98%; /* #F9FAFB */
+  --foreground: 20 14.3% 4.1%; /* #0C0A09 */
+  --muted: 60 4.8% 95.9%; /* #F3F4F6 */
+  --muted-foreground: 25 5.3% 44.7%; /* #6B7280 */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 20 14.3% 4.1%; /* #0C0A09 */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 20 14.3% 4.1%; /* #0C0A09 */
+  --border: 20 5.9% 90%; /* #E5E7EB */
+  --input: 20 5.9% 90%; /* #E5E7EB */
+  --primary: 116 25% 25%; /* #2D5016 - Forest Green */
+  --primary-foreground: 210 40% 98%; /* #F8FAFC */
+  --secondary: 116 14% 61%; /* #9CAF88 - Sage */
+  --secondary-foreground: 24 9.8% 10%; /* #1C1917 */
+  --accent: 200 40% 52%; /* #4A90B8 - Sky Blue */
+  --accent-foreground: 60 9.1% 97.8%; /* #FEFCFB */
+  --destructive: 0 84.2% 60.2%; /* #EF4444 */
+  --destructive-foreground: 60 9.1% 97.8%; /* #FEFCFB */
+  --ring: 20 14.3% 4.1%; /* #0C0A09 */
+  --radius: 0.75rem;
+  
+  /* Adventure theme colors */
+  --forest: 116 25% 25%; /* #2D5016 */
+  --sage: 116 14% 61%; /* #9CAF88 */
+  --sky: 200 40% 52%; /* #4A90B8 */
+  --sunset: 12 75% 59%; /* #E97451 */
+  --earth: 25 52% 31%; /* #8B4513 */
+  --stone: 220 14% 42%; /* #6B7280 */
+}
+
+.dark {
+  --background: 240 10% 3.9%; /* #0A0A0B */
+  --foreground: 0 0% 98%; /* #FAFAFA */
+  --muted: 240 3.7% 15.9%; /* #262626 */
+  --muted-foreground: 240 5% 64.9%; /* #A3A3A3 */
+  --popover: 240 10% 3.9%; /* #0A0A0B */
+  --popover-foreground: 0 0% 98%; /* #FAFAFA */
+  --card: 240 10% 3.9%; /* #0A0A0B */
+  --card-foreground: 0 0% 98%; /* #FAFAFA */
+  --border: 240 3.7% 15.9%; /* #262626 */
+  --input: 240 3.7% 15.9%; /* #262626 */
+  --primary: 116 25% 35%; /* #3D6B1F */
+  --primary-foreground: 210 40% 98%; /* #F8FAFC */
+  --secondary: 116 14% 71%; /* #B5C8A1 */
+  --secondary-foreground: 0 0% 98%; /* #FAFAFA */
+  --accent: 200 40% 62%; /* #5BA3D1 */
+  --accent-foreground: 240 5.9% 10%; /* #171717 */
+  --destructive: 0 62.8% 30.6%; /* #B91C1C */
+  --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+  --ring: 240 4.9% 83.9%; /* #D4D4D8 */
+  
+  /* Adventure theme colors - dark mode */
+  --forest: 116 25% 35%; /* #3D6B1F */
+  --sage: 116 14% 71%; /* #B5C8A1 */
+  --sky: 200 40% 62%; /* #5BA3D1 */
+  --sunset: 12 75% 69%; /* #ED8965 */
+  --earth: 25 52% 41%; /* #A0541A */
+  --stone: 220 14% 52%; /* #7C8592 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .text-forest {
+    color: hsl(var(--forest));
+  }
+  
+  .text-sage {
+    color: hsl(var(--sage));
+  }
+  
+  .text-sky {
+    color: hsl(var(--sky));
+  }
+  
+  .text-sunset {
+    color: hsl(var(--sunset));
+  }
+  
+  .text-earth {
+    color: hsl(var(--earth));
+  }
+  
+  .text-stone {
+    color: hsl(var(--stone));
+  }
+  
+  .bg-forest {
+    background-color: hsl(var(--forest));
+  }
+  
+  .bg-sage {
+    background-color: hsl(var(--sage));
+  }
+  
+  .bg-sky {
+    background-color: hsl(var(--sky));
+  }
+  
+  .bg-sunset {
+    background-color: hsl(var(--sunset));
+  }
+  
+  .bg-earth {
+    background-color: hsl(var(--earth));
+  }
+  
+  .bg-stone {
+    background-color: hsl(var(--stone));
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounce 1s ease-in-out 2;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar for horizontal scrolling */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: hsl(var(--sage));
+  border-radius: 2px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--forest));
+}
+
+/* Touch-friendly elements */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover\:shadow-lg:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+}
+
+/* Photo grid masonry-like layout */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.photo-grid-item {
+  break-inside: avoid;
+}
+
+/* Image transitions */
+.photo-item {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.photo-item:hover {
+  transform: scale(1.02);
+}
+
+.photo-item:active {
+  transform: scale(0.98);
+}
