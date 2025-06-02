@@ -35,7 +35,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   });
-  app.use('/uploads', require('express').static(uploadsDir));
+  app.use('/uploads', express.static(uploadsDir));
 
   // Stats endpoint
   app.get("/api/stats", async (req, res) => {

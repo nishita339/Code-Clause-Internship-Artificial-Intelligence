@@ -1,0 +1,11 @@
+{
+  "personality_scores": {
+    "openness": 0.7819444444444446,
+    "conscientiousness": 0.5520833333333334,
+    "extroversion": 0.5541666666666667,
+    "agreeableness": 0.59375,
+    "neuroticism": 0.2
+  },
+  "analysis_summary": "CV PERSONALITY ANALYSIS RESULTS\n==================================================\n\nPERSONALITY TRAIT SCORES:\n-------------------------\nOpenness       : 0.782 (78%) - high\nConscientiousness: 0.552 (55%) - medium\nExtroversion   : 0.554 (55%) - medium\nAgreeableness  : 0.594 (59%) - medium\nNeuroticism    : 0.200 (20%) - low\n\nDETAILED INTERPRETATION:\n-------------------------\n\u2022 Openness: highly creative and open to new experiences\n\u2022 Conscientiousness: reasonably organized with good planning skills\n\u2022 Extroversion: balanced between social and independent work\n\u2022 Agreeableness: generally cooperative with healthy boundaries\n\u2022 Neuroticism: very calm under pressure\n\nKEY INSIGHTS:\n---------------\n\u2022 Strongest trait: Openness (0.782)\n\u2022 Areas for development: Neuroticism (0.200)\n\u2022 Professional strengths: Openness\n",
+  "cv_length": 4348
+}
